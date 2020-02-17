@@ -1,13 +1,15 @@
 import React from 'react';
 
-const MusicDetail = (props) => {
+const MusicDetail = (props) =>{
 
-  if (!props.entry) return null;
+  if (!props.feed) return null;
 
   return (
     <div>
-    <h3>{props.entry.title}</h3>
+    <h3>{props.title}</h3>
+    <p>{props.artist}</p>
     </div>
   )
-
 }
+
+export default MusicDetail;
