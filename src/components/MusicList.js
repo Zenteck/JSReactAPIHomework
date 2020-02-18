@@ -1,23 +1,25 @@
 import React, {Fragment} from 'react';
 import MusicDetail from './MusicDetail.js';
 
-function MusicList(props) {
-  const tracks = props.data.map((entry, artist) =>{
+const MusicList = (props) => {
+  const tracks = props.tracks.map((entry, title) => {
     return (
-      <MusicDetail
-      title={entry.title.label}
-      // artist={entry.artist.label}
-      key={artist}>
+      <MusicDetail>
+
       </MusicDetail>
     )
   })
 
 return (
   <Fragment>
-  {tracks}
+    <MusicDetail/>
   </Fragment>
   )
 
 }
 
 export default MusicList;
+
+// artist={entry.artist.label}
+// value={entry}
+// key={entry.title}>

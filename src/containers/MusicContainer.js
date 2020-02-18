@@ -1,5 +1,5 @@
 import React from 'react';
-import MusicList from '../components/MusicList.js'
+import MusicDetail from '../components/MusicList.js'
 
 class MusicContainer extends React.Component {
   constructor(props){
@@ -16,16 +16,21 @@ componentDidMount(){
   fetch(url)
     .then(res => res.json())
     .then(data => this.setState({tracks: data.feed.entry}))
-    .then(console.log(this.tracks))
     .catch(err => console.error)
 }
 
   render(){
+  const chart = tracks.map(track) => {
+      track.titel
 
-    return(
+
+  }
+
+
+    return()
     <div>
     <h2>Music Container</h2>
-    <MusicList/>
+    <MusicDetail tracks={this.state.tracks}/>
     </div>
     )
   }
